@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import homeImg from '../assets/homeBcg.jpeg';
+import { setFlex, setBackground } from '../styles/styles';
 
 const Hero = styled.header `
   min-height: 100vh;
-  background: url(${props => props.img || homeImg});
+  ${props => setBackground({img: props.img})}
+  ${setFlex()}
 `;
 
 export default Hero
